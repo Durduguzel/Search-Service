@@ -75,18 +75,33 @@ Bu proje, farklı içerik sağlayıcılardan (JSON/XML) gelen içerikleri birle�
    git clone <repo-url>
    cd <project-folder>
    ```
-2. Container’ları ayağa kaldır:
+2. .env dosyasını oluştur / ayarla:
+
+   ```bash
+   cp .env.example .env
+   ```
+   Eğer APP_KEY boş ise çalıştır:
+
+   ```bash
+   php artisan key:generate
+   ```
+3. Composer ile bağımlılıkları yükle:
+
+   ```bash
+   composer install
+   ```
+4. Container’ları ayağa kaldır:
 
    ```bash
    docker-compose up --build -d
    ```
-3. Database migrate ve seed çalıştır:
+5. Database migrate ve seed çalıştır:
 
    ```bash
    docker-compose exec app php artisan migrate --force
    docker-compose exec app php artisan db:seed --class=DatabaseSeeder --force
    ```
-4. Scheduler ve Queue worker Supervisor ile otomatik çalışır.
+6. Scheduler ve Queue worker Supervisor ile otomatik çalışır.
    Loglar: `storage/logs/`
 
 ---
