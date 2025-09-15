@@ -58,6 +58,7 @@ Bu proje, farklı içerik sağlayıcılardan (JSON/XML) gelen içerikleri birle�
   3. Token geçerlilik süresi: 15 dk
   4. API rate limit: **dakikada 60 istek / kullanıcı**
 
+* Detaylı API kullanımı için lütfen `API_DOC.md` dosyasını inceleyiniz.
 ---
 
 ## ⚙️ Kurulum – Docker
@@ -118,6 +119,15 @@ Bu proje, farklı içerik sağlayıcılardan (JSON/XML) gelen içerikleri birle�
 * Redis cache: `CACHE_DRIVER=redis`
 * API rate limit: **dakikada 60 istek / kullanıcı**
 * ContentController cache: sorgular **30 dk** tutulur
+
+---
+
+## 🧪 Quick Test – Unit Test Çalıştırma
+* Projede ScoreCalculator ve diğer servislerin testlerini Docker ortamında çalıştırmak için:
+
+   ```bash
+    docker-compose exec app php artisan test
+   ```
 
 ---
 
