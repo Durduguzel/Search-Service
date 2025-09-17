@@ -76,7 +76,12 @@ Bu proje, farklı içerik sağlayıcılardan (JSON/XML) gelen içerikleri birle�
    git clone <repo-url>
    cd <project-folder>
    ```
-2. .env dosyasını oluştur / ayarla:
+2. Composer ile bağımlılıkları yükle:
+
+   ```bash
+   composer install
+   ```
+3. .env dosyasını oluştur / ayarla:
 
    ```bash
    cp .env.example .env
@@ -85,11 +90,6 @@ Bu proje, farklı içerik sağlayıcılardan (JSON/XML) gelen içerikleri birle�
 
    ```bash
    php artisan key:generate
-   ```
-3. Composer ile bağımlılıkları yükle:
-
-   ```bash
-   composer install
    ```
 4. Container’ları ayağa kaldır:
 
