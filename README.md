@@ -4,6 +4,7 @@
 
 **Örnek Portal Kullanıcısı:**
 ```
+url: http://localhost:8080
 email: first_user@example.com
 şifre: 12345
 ```
@@ -37,6 +38,7 @@ Bu proje, farklı içerik sağlayıcılardan (JSON/XML) gelen içerikleri birle�
 
 ### 2. Portal (Arayüz)
 
+* http://localhost:8080
 * Kullanıcı, **login** ekranından giriş yapar ve iki ana ekran görür:
 
   * İçerikler listesi
